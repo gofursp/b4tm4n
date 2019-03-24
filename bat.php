@@ -60,7 +60,7 @@ define('_',DIRECTORY_SEPARATOR);
 
 foreach($_SERVER as $k => $v)
 {
-	define(strtolower($k),$_SERVER[$k]);
+	define(strtolower($k), serialize($_SERVER[$k]));
 }
 
 function B64E($x)
